@@ -58,7 +58,7 @@
 }
 
 .contact-grid hr {
-  border-top: 5px dotted black;
+  border-top: 5px solid  black;
   width: 50%;
   margin: auto;
 }
@@ -91,7 +91,7 @@
 }
 
 .banner-text hr {
-  border-top: 5px dotted white;
+  border-top: 5px solid white;
   width: 50%;
   margin: auto;
 }
@@ -105,7 +105,7 @@
 .social-links {
   display: flex;
   justify-content: space-between;
-  width: 50%;
+  width: 10%;
   margin: auto;
 }
 
