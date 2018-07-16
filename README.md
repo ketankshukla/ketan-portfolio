@@ -1,17 +1,26 @@
-# [YouTube Tutorial](https://www.youtube.com/playlist?list=PL3KAvm6JMiowqFTXj3oPQkhP7aCgRHFTm)
-I created a Youtube code along tutorial for this project. Click the link above to view!
+Professional Portfolio
+---
+<img src="https://avatars0.githubusercontent.com/u/13595476?s=400&u=21f29b20b242b3517230810b0feac71bda4eebb4&v=4" width="60%" height="60%" />
 
-# react-portfolio-starter
-A React based personal portfolio app using create-react-app and React Router v4.
+Created with *create-react-app*. See the [full create-react-app guide](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
-# Tools
-* create-react-app cli
-* React MDL material design
-* React Router v4
 
-# Start App
-Clone repo, install, cd into folder and run:
-```git
-npm install
-npm start
-```
+
+Try It Here
+---
+
+[ketan-react-app.herokuapp.com](https://ketan-portfolio.herokuapp.com/)
+
+
+
+Install
+---
+
+`npm install`
+
+
+
+Usage
+---
+
+`npm start`

@@ -15,14 +15,13 @@ class Projects extends Component {
         <div className="projects-grid">
           {/* Project 1 */}
           <Card shadow={5} style={{minWidth: '450', margin: 'auto'}}>
-            <CardTitle style={{color: '#fff', height: '176px', background: 'url(https://xtnotes-1255646395.coshk.myqcloud.com/images/react-1.svg) center / cover'}} >React Project #1</CardTitle>
+            <CardTitle style={{color: '#fff', height: '176px', background: 'url(https://xtnotes-1255646395.coshk.myqcloud.com/images/react-1.svg) center / cover'}} ></CardTitle>
             <CardText>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+              Simple React Calculator
             </CardText>
-            <CardActions border>
-              <Button colored>GitHub</Button>
-              <Button colored>CodePen</Button>
-              <Button colored>Live Demo</Button>
+            <CardActions border style={{padding: '20px'}}>
+              <a href="https://github.com/ketankshukla/ketan-react-calc" rel="noopener noreferrer" target="_blank"><Button colored raised ripple style={{margin: '20px'}}>GitHub</Button></a>
+              <a href="https://ketan-react-calc.herokuapp.com" rel="noopener noreferrer" target="_blank"><Button colored raised ripple style={{ margin: '20px' }}>Live Demo</Button></a>
             </CardActions>
             <CardMenu style={{color: '#fff'}}>
               <IconButton name="share" />
@@ -30,36 +29,36 @@ class Projects extends Component {
           </Card>
 
           {/* Project 2 */}
-          <Card shadow={5} style={{minWidth: '450', margin: 'auto'}}>
-            <CardTitle style={{color: '#fff', height: '176px', background: 'url(https://xtnotes-1255646395.coshk.myqcloud.com/images/react-1.svg) center / cover'}} >React Project #2</CardTitle>
+          <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>
+            <CardTitle style={{ color: '#fff', height: '176px', background: 'url(https://xtnotes-1255646395.coshk.myqcloud.com/images/react-1.svg) center / cover' }} ></CardTitle>
             <CardText>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+              Emoji Search
             </CardText>
-            <CardActions border>
-              <Button colored>GitHub</Button>
-              <Button colored>CodePen</Button>
-              <Button colored>Live Demo</Button>
+            <CardActions border style={{ padding: '20px' }}>
+              <a href="https://github.com/ketankshukla/ketan-emoji-search" rel="noopener noreferrer" target="_blank"><Button colored raised ripple style={{ margin: '20px' }}>GitHub</Button></a>
+              <a href="https://ketan-emoji-search.herokuapp.com" rel="noopener noreferrer" target="_blank"><Button colored raised ripple style={{ margin: '20px' }}>Live Demo</Button></a>
             </CardActions>
-            <CardMenu style={{color: '#fff'}}>
+            <CardMenu style={{ color: '#fff' }}>
               <IconButton name="share" />
             </CardMenu>
           </Card>
 
-          {/* Project 3 */}
-          <Card shadow={5} style={{minWidth: '450', margin: 'auto'}}>
-            <CardTitle style={{color: '#fff', height: '176px', background: 'url(https://xtnotes-1255646395.coshk.myqcloud.com/images/react-1.svg) center / cover'}} >React Project #3</CardTitle>
+          {/* Project 2 */}
+          <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>
+            <CardTitle style={{ color: '#fff', height: '176px', background: 'url(https://xtnotes-1255646395.coshk.myqcloud.com/images/react-1.svg) center / cover' }} ></CardTitle>
             <CardText>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+              This portfolio
             </CardText>
-            <CardActions border>
-              <Button colored>GitHub</Button>
-              <Button colored>CodePen</Button>
-              <Button colored>Live Demo</Button>
+            <CardActions border style={{ padding: '20px' }}>
+              <a href="https://github.com/ketankshukla/ketan-portfolio" rel="noopener noreferrer" target="_blank"><Button colored raised ripple style={{ margin: '20px' }}>GitHub</Button></a>
+              <a href="https://ketan-portfolio.herokuapp.com" rel="noopener noreferrer" target="_blank"><Button colored raised ripple style={{ margin: '20px' }}>Live Demo</Button></a>
             </CardActions>
-            <CardMenu style={{color: '#fff'}}>
+            <CardMenu style={{ color: '#fff' }}>
               <IconButton name="share" />
             </CardMenu>
           </Card>
+
+          
         </div>
 
 
