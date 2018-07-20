@@ -47,7 +47,7 @@ class Projects extends Component {
           <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>
             <CardTitle style={{ color: '#fff', height: '176px', background: 'url(https://xtnotes-1255646395.coshk.myqcloud.com/images/react-1.svg) center / cover' }} ></CardTitle>
             <CardText>
-              This portfolio
+              Professional Portfolio
             </CardText>
             <CardActions border style={{ padding: '20px' }}>
               <a href="https://github.com/ketankshukla/ketan-portfolio" rel="noopener noreferrer" target="_blank"><Button colored raised ripple style={{ margin: '20px' }}>GitHub</Button></a>
@@ -62,11 +62,26 @@ class Projects extends Component {
           <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>
             <CardTitle style={{ color: '#fff', height: '176px', background: 'url(https://xtnotes-1255646395.coshk.myqcloud.com/images/react-1.svg) center / cover' }} ></CardTitle>
             <CardText>
-              Shopping cart
+              Shopping Cart
             </CardText>
             <CardActions border style={{ padding: '20px' }}>
               <a href="https://github.com/ketankshukla/ketan-shopping-cart" rel="noopener noreferrer" target="_blank"><Button colored raised ripple style={{ margin: '20px' }}>GitHub</Button></a>
               <a href="https://ketan-shopping-cart.herokuapp.com" rel="noopener noreferrer" target="_blank"><Button colored raised ripple style={{ margin: '20px' }}>Live Demo</Button></a>
+            </CardActions>
+            <CardMenu style={{ color: '#fff' }}>
+              <IconButton name="share" />
+            </CardMenu>
+          </Card>
+
+          {/* Project 5 */}
+          <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>
+            <CardTitle style={{ color: '#fff', height: '176px', background: 'url(https://xtnotes-1255646395.coshk.myqcloud.com/images/react-1.svg) center / cover' }} ></CardTitle>
+            <CardText>
+              Product Comparison
+            </CardText>
+            <CardActions border style={{ padding: '20px' }}>
+              <a href="https://github.com/ketankshukla/ketan-compare-products" rel="noopener noreferrer" target="_blank"><Button colored raised ripple style={{ margin: '20px' }}>GitHub</Button></a>
+              <a href="https://ketan-compare-products.herokuapp.com" rel="noopener noreferrer" target="_blank"><Button colored raised ripple style={{ margin: '20px' }}>Live Demo</Button></a>
             </CardActions>
             <CardMenu style={{ color: '#fff' }}>
               <IconButton name="share" />
