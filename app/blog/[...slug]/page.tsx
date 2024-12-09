@@ -21,43 +21,40 @@ const layouts = {
   PostBanner,
 }
 
-interface PageProps {
-  params: {
-    slug: string[]
-  }
-}
-
-export async function generateMetadata({ params }: PageProps): Promise<Metadata | undefined> {
-  const slug = decodeURI(params.slug.join('/'))
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string[] }
+}): Promise<Metadata> {
+  const slug = params.slug.join('/')
   const post = allBlogs.find((p) => p.slug === slug)
   if (!post) {
-    return
+    return {}
   }
 
-  const authorList = post?.authors || ['default']
+  const authorList = post.authors || ['default']
   const authorDetails = authorList.map((author) => {
     const authorResults = allAuthors.find((p) => p.slug === author)
     return coreContent(authorResults as Authors)
   })
 
-  const publishedAt = new Date(post.date).toISOString()
-  const modifiedAt = new Date(post.lastmod || post.date).toISOString()
-  const authors = authorDetails.map((author) => author.name)
-
   return {
     title: post.title,
     description: post.summary,
+    authors: authorDetails.map((author) => ({
+      name: author.name,
+    })),
     openGraph: {
       title: post.title,
       description: post.summary,
       siteName: siteMetadata.title,
       locale: 'en_US',
       type: 'article',
-      publishedTime: publishedAt,
-      modifiedTime: modifiedAt,
+      publishedTime: post.date,
+      modifiedTime: post.lastmod || post.date,
       url: './',
       images: post.images || [siteMetadata.socialBanner],
-      authors: authors.length > 0 ? authors : [siteMetadata.author],
+      authors: authorDetails.map((author) => author.name),
     },
     twitter: {
       card: 'summary_large_image',
@@ -68,12 +65,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata 
   }
 }
 
-export async function generateStaticParams({ params }: PageProps) {
-  return allBlogs.map((p) => ({ slug: p.slug.split('/').map((name) => decodeURI(name)) }))
+export async function generateStaticParams() {
+  return allBlogs.map((p) => ({
+    slug: p.slug.split('/'),
+  }))
 }
 
-export default async function Page({ params }: PageProps) {
-  const slug = decodeURI(params.slug.join('/'))
+export default async function Page({ params }: { params: { slug: string[] } }) {
+  const slug = params.slug.join('/')
   // Filter out drafts in production
   const sortedCoreContents = allCoreContent(sortPosts(allBlogs))
   const postIndex = sortedCoreContents.findIndex((p) => p.slug === slug)
@@ -84,7 +83,7 @@ export default async function Page({ params }: PageProps) {
   const prev = sortedCoreContents[postIndex + 1]
   const next = sortedCoreContents[postIndex - 1]
   const post = allBlogs.find((p) => p.slug === slug) as Blog
-  const authorList = post?.authors || ['default']
+  const authorList = post.authors || ['default']
   const authorDetails = authorList.map((author) => {
     const authorResults = allAuthors.find((p) => p.slug === author)
     return coreContent(authorResults as Authors)
@@ -96,8 +95,8 @@ export default async function Page({ params }: PageProps) {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: post.title,
-    datePublished: new Date(post.date).toISOString(),
-    dateModified: new Date(post.lastmod || post.date).toISOString(),
+    datePublished: post.date,
+    dateModified: post.lastmod || post.date,
     description: post.summary,
     image: post.images || [],
     url: `${siteMetadata.siteUrl}/blog/${post.slug}`,
