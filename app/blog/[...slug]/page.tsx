@@ -21,10 +21,14 @@ const layouts = {
   PostBanner,
 }
 
-export async function generateMetadata(props: {
-  params: { slug: string[] }
-}): Promise<Metadata | undefined> {
-  const slug = decodeURI(props.params.slug.join('/'))
+interface PageProps {
+  params: {
+    slug: string[]
+  }
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata | undefined> {
+  const slug = decodeURI(params.slug.join('/'))
   const post = allBlogs.find((p) => p.slug === slug)
   if (!post) {
     return
@@ -64,11 +68,11 @@ export async function generateMetadata(props: {
   }
 }
 
-export const generateStaticParams = async () => {
+export async function generateStaticParams({ params }: PageProps) {
   return allBlogs.map((p) => ({ slug: p.slug.split('/').map((name) => decodeURI(name)) }))
 }
 
-export default async function Page({ params }: { params: { slug: string[] } }) {
+export default async function Page({ params }: PageProps) {
   const slug = decodeURI(params.slug.join('/'))
   // Filter out drafts in production
   const sortedCoreContents = allCoreContent(sortPosts(allBlogs))
