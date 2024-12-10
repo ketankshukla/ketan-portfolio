@@ -8,6 +8,7 @@ export default function Comments({ slug, title }: { slug: string; title: string 
   if (!siteMetadata.comments?.provider) {
     return null
   }
+
   // Use the pathname for the discussion to maintain consistency
   return <CommentsComponent commentsConfig={siteMetadata.comments} slug={slug} />
 }
