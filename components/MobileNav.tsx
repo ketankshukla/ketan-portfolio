@@ -33,7 +33,7 @@ const MobileNav = () => {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
-          className="h-8 w-8 text-gray-900 hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-400"
+          className="h-10 w-10 text-[#FFD43B] hover:opacity-80 dark:text-[#FFD43B]"
         >
           <path
             fillRule="evenodd"
@@ -72,11 +72,15 @@ const MobileNav = () => {
                 ref={navRef}
                 className="mt-8 flex h-full basis-0 flex-col items-start overflow-y-auto pl-12 pt-2 text-left"
               >
-                {headerNavLinks.map((link) => (
+                {headerNavLinks.map((link, index) => (
                   <Link
                     key={link.title}
                     href={link.href}
-                    className="mb-4 py-2 pr-4 text-2xl font-bold tracking-widest text-gray-900 outline outline-0 hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-400"
+                    className={`mb-4 py-2 pr-4 text-3xl font-bold tracking-widest hover:opacity-80 ${
+                      index % 2 === 0
+                        ? 'text-[#FFD43B] dark:text-[#FFD43B]'
+                        : 'text-[#306998] dark:text-[#306998]'
+                    }`}
                     onClick={onToggleNav}
                   >
                     {link.title}
@@ -85,7 +89,7 @@ const MobileNav = () => {
               </nav>
 
               <button
-                className="fixed right-4 top-7 z-80 h-16 w-16 p-4 text-gray-900 hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-400"
+                className="fixed right-4 top-7 z-80 h-16 w-16 p-4 text-[#306998] hover:opacity-80 dark:text-[#306998]"
                 aria-label="Toggle Menu"
                 onClick={onToggleNav}
               >

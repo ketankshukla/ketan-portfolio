@@ -9,8 +9,9 @@ export default function Projects() {
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pb-8 pt-6 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            Projects
+          <h1 className="text-3xl font-extrabold leading-9 tracking-tight sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+            <span className="text-[#FFD43B] dark:text-[#FFD43B]">Pro</span>
+            <span className="text-[#306998] dark:text-[#306998]">jects</span>
           </h1>
         </div>
         <div className="container py-12">

@@ -2,7 +2,7 @@
 const siteMetadata = {
   title: 'Ketan Shukla | Portfolio',
   author: 'Ketan Shukla',
-  headerTitle: 'Ketan Shukla',
+  headerTitle: 'Ketan Shukla Portfolio',
   description: 'Python Full Stack Engineer specializing in Django and FastAPI development',
   language: 'en-us',
   theme: 'system', // system, dark or light
