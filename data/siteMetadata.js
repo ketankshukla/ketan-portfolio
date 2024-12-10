@@ -38,7 +38,7 @@ const siteMetadata = {
       repositoryId: 'R_kgDONbPxKA',
       category: 'General',
       categoryId: 'DIC_kwDONbPxKM4ClEyF',
-      mapping: 'title',
+      mapping: 'pathname',
       strict: '0',
       reactions: '0',
       emitMetadata: false,
