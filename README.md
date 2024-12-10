@@ -43,7 +43,7 @@ I'm a Python Full Stack Engineer with 2 years of experience in building robust a
 
 ## 📚 Recent Blog Posts
 
-I regularly write about software development, focusing on Python, web development, and best practices. Check out my latest articles at [ketankshukla.com/blog](https://ketankshukla.com/blog).
+I regularly write about software development, focusing on Python, web development, and best practices. Check out my latest articles at [my programming blog](https://ketanshukla.com/blog).
 
 ## 🎯 Current Focus
 
