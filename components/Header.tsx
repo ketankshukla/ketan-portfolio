@@ -20,20 +20,14 @@ const Header = () => {
             <Image
               src="/static/images/logo.png"
               alt="Logo"
-              width={48}
-              height={48}
-              className="h-12 w-auto"
+              width={64}
+              height={64}
+              className="h-16 w-auto rounded-xl sm:h-12"
             />
           </div>
-          <div className="flex flex-col">
-            <div className="text-lg font-semibold sm:text-2xl md:text-3xl">
-              <span className="text-[#FFD43B] dark:text-[#FFD43B]">Ketan Shukla</span>{' '}
-              <span className="text-[#306998] dark:text-[#306998]">Portfolio</span>
-            </div>
-            <div className="text-sm font-medium sm:text-lg md:text-xl">
-              <span className="text-[#FFD43B] dark:text-[#FFD43B]">Full Stack</span>{' '}
-              <span className="text-[#306998] dark:text-[#306998]">Python Developer</span>
-            </div>
+          <div className="text-3xl font-semibold sm:text-2xl md:text-3xl">
+            <span className="text-[#FFD43B] dark:text-[#FFD43B]">Ketan</span>{' '}
+            <span className="text-[#306998] dark:text-[#306998]">Shukla</span>
           </div>
         </div>
       </Link>
