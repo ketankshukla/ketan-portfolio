@@ -60,7 +60,7 @@ I regularly write about software development, focusing on Python, web developmen
 
 ## 🛠️ Portfolio Projects
 
-Visit my portfolio at [ketankshukla.com](https://ketankshukla.com) to see my latest projects and contributions.
+Visit my [portfolio](https://www.ketanshukla.com/projects) to see my latest projects and contributions.
 
 ---
 
