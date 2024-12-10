@@ -9,7 +9,7 @@ const siteMetadata = {
   siteUrl: 'https://ketanshukla.com',
   siteRepo: 'https://github.com/ketankshukla/portfolio-new',
   siteLogo: `${process.env.BASE_PATH || ''}/static/images/logo.png`,
-  socialBanner: `${process.env.BASE_PATH || ''}/static/images/twitter-card.png`,
+  socialBanner: `${process.env.BASE_PATH || ''}/static/images/logo.png`,
   email: 'resume@ketankshukla.com',
   github: 'https://github.com/ketankshukla',
   linkedin: 'https://www.linkedin.com/in/ketankshukla/',

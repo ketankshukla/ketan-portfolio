@@ -68,8 +68,17 @@ export default function ListLayout({
 }: ListLayoutProps) {
   const [searchValue, setSearchValue] = useState('')
   const filteredBlogPosts = posts.filter((post) => {
-    const searchContent = post.title + post.summary + post.tags?.join(' ')
-    return searchContent.toLowerCase().includes(searchValue.toLowerCase())
+    // Convert search value to lowercase for case-insensitive comparison
+    const searchLower = searchValue.toLowerCase()
+
+    // Check if search matches title or summary
+    const titleMatch = (post.title || '').toLowerCase().includes(searchLower)
+    const summaryMatch = (post.summary || '').toLowerCase().includes(searchLower)
+
+    // Check if search matches any tag (case-insensitive)
+    const tagMatch = post.tags?.some((tag) => tag.toLowerCase().includes(searchLower)) || false
+
+    return titleMatch || summaryMatch || tagMatch
   })
 
   // If initialDisplayPosts exist, display it if no searchValue is specified
